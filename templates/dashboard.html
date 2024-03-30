@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submissions Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../static/dash_style.css">
+</head>
+<body>
+    <div class="h1-container"> <h1>Form Submissions</h1></div>
+    <div class="logout-container">
+        <form action="/logout" method="post">
+            <button class="logout-button" type="submit">Logout</button>
+     </form>
+    </div>
+    <center>
+        <form method="post" action="/update">
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Full Name</th>
+                            <th scope="col">Roll No</th>
+                            <th scope="col">Registration No</th>
+                            <th scope="col">School</th>
+                            <th scope="col">Program</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">City</th>
+                            <th scope="col">State</th>
+                            <th scope="col">Pincode</th>
+                        </tr>
+                    </thead>
+                    <tbody class="scrollable-content">
+                        {% for data in form_data %}
+                            <tr>
+                                <td><input type="radio" name="selected_document_id" value="{{data._id}}" ></td>
+                                <td><input name="Full_Name_{{ data._id }}" type="text" value="{{ data.Full_Name }}"></td>
+                                <td><input name="Roll_No_{{ data._id }}" type="text" value="{{ data.Roll_No }}"></td>
+                                <td><input name="Registration_No_{{ data._id }}" type="text" value="{{ data.Registration_No }}"></td>
+                                <td><input name="School_{{ data._id }}" type="text" value="{{ data.School }}"></td>
+                                <td><input name="Program_{{ data._id }}" type="text" value="{{ data.Program }}"></td>
+                                <td><input name="email_{{ data._id }}" type="email" value="{{ data.email }}"></td>
+                                <td><input name="phone_{{ data._id }}" type="number" value="{{ data.phone }}"></td>
+                                <td><input name="Gender_{{ data._id }}" type="text" value="{{ data.Gender }}"></td>
+                                <td><input name="city_{{ data._id }}" type="text" value="{{ data.address.city }}"></td>
+                                <td><input name="state_{{ data._id }}" type="text" value="{{ data.address.state }}"></td>
+                                <td><input name="pincode_{{ data._id }}" type="number" value="{{ data.address.pincode }}"></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% if message %}
+                <br><div class="update-message">{{ message }}</div>
+            {% endif %}
+            <button type="submit">
+                Save
+            </button>
+        </form>
+        <div class="dload-container">
+            <form method="get" action="/download_excel">
+                <button class="icon" type="submit"></button>
+            </form>
+        </div>
+    </center>
+</body>
+</html>

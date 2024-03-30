@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    width: 50%;
+    background-color: #fff;
+    border-radius: 0;
+    padding: 20px;
+    max-width: 45%;
+    justify-content: left;
+    align-items: center;
+    max-height: 690px;
+    overflow-y: auto;
+}
+
+.main h2 {
+    color: #a47afd;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.main::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.image {
+    flex: 1;
+    max-width: 50%;
+    margin-right: 20px;
+    justify-content: left;
+
+
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2f4a9a;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fddb00;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: #af0e7c;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    width: 100px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 760px) {
+    .input-group {
+        flex-direction: column;
+    }}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-right: 10px;
+    background-image: url('admin-profile.png');
+    background-size: 100%;
+    position: relative; /* Position relative for absolute positioning of text */
+}
+
+.dload-container {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.icon:hover + .tooltip {
+    display: inline-block; /* Display tooltip on hover */
+}
+
+.tooltip {
+    display: none; /* Hide tooltip by default */
+    position: absolute;
+    top: 5px;
+    left: calc(100% + 5px); /* Adjust the position of the tooltip */
+    background-color: #fff;
+    padding: 5px;
+}

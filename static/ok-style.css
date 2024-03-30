@@ -1,0 +1,111 @@
+body{
+    background-color: #242424;
+}
+button{
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: #af0e7c;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin-right: 10px;
+    background-image: url('admin-profile.png');
+    background-size: 100%;
+    position: relative; /* Position relative for absolute positioning of text */
+}
+
+.dload-container {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.icon:hover + .tooltip {
+    display: inline-block; /* Display tooltip on hover */
+}
+
+.tooltip {
+    display: none; /* Hide tooltip by default */
+    position: absolute;
+    top: 5px;
+    left: calc(100% + 5px); /* Adjust the position of the tooltip */
+    background-color: transparent;
+    color: white;
+    font-family: Arial, serif;
+    padding: 5px;
+}
+
+.image{
+    justify-content: center;
+    display:flex;
+    background-size:cover;
+}
+.container {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    
+}
+.container2 {
+    top: 260px;
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+
+}
+h1{
+    font-size: 50px;
+    font-family: Arial,serif;
+    color: white;
+    letter-spacing: normal;
+    transition: color 0.3s,letter-spacing 0.3s;
+}
+
+h1:hover{
+    letter-spacing: 2px;
+    color: #af0e7c;
+}
+.form-btn{
+    font-size: 20px;
+    font-family: Arial,serif;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    letter-spacing: normal;
+    transition: color 0.3s,letter-spacing 0.3s;
+}
+.form-btn:hover{
+    color: #af0e7c;
+    letter-spacing: 1px;
+    background-color: transparent;
+}
+
+.form-container {
+    top: 100px;
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    z-index: 1;
+    position: absolute;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student details Form</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image">
+            <img src="../static/icegif-873.gif" alt="Your Image">
+        </div>
+        <div class="main">
+            <h2>Student Details Form<br></h2>
+            <form method="post" action="/submit">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="roll">University Roll Number:</label>
+                <input type="text" id="roll" name="roll" required>
+
+                <label for="reg">Registration Number:</label>
+                <input type="text" id="reg" name="reg" required>
+
+                <label for="school">School Name:</label>
+                <input type="text" id="school" name="school" required>
+
+                <label for="prog">Program:</label>
+                <input type="text" id="prog" name="prog" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="number" id="phone" name="phone" maxlength="10" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                <label for="address">Address</label><br>
+                <div class="input-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pincode">Pincode:</label>
+                    <input type="number" id="pincode" name="pincode" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="dload-container">
+            <form method="get" action="/">
+                <button class="icon" type="submit"></button>
+                <div class="tooltip">Admin</div>
+            </form>
+        </div>
+</body>
+</html>

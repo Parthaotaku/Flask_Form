@@ -1,0 +1,133 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+body{
+    background-image: url("lylacc.gif");
+    background-size: cover;
+}
+h1 {
+    font-family: Arial, serif;
+    color: #af0e7c;
+    transition: color 0.3s;
+}
+h1:hover{
+    color: #fddb00;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+th {
+    font-family: Arial, serif;
+    background-color: #f2f2f2;
+    color: #2f4a9a;
+}
+
+button {
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 13px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #af0e7c;
+    width: 33.33%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover{
+    background-color: #fddb00;
+}
+.logout-container {
+    position: absolute;
+    top: 5px;
+    right: 45px;
+}
+.h1-container {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #af0e7c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #fddb00; /* Change color on hover */
+}
+.wrap {
+    justify-content: center;
+}
+
+.container{
+    margin-top: 100px;
+    display: flex;
+    width: 95%;
+    max-height: 516px;
+    overflow-y: auto;
+    outline: 1px solid white;
+}
+.container thead th {
+      position: sticky;
+      top: 0;
+    }
+
+.container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.update-message {
+    color: #ffffff;
+    font-style: italic;
+}
+
+
+.icon {
+    display: inline-block;
+    width: 5px; /* Adjust width of the icon */
+    height: 5px; /* Adjust height of the icon */
+    margin-right: 10px; /* Adjust spacing between icon and text */
+    background-image: url('downlod_icon.png'); /* Replace with the path to your icon image */
+    background-size: 30px;
+    background-color: transparent;
+    transition: box-shadow 0.3s;
+}
+
+.icon:hover{
+    box-shadow: 0 0 20px #fffa3d;
+}
+.dload-container {
+    position: absolute;
+    top: 20px;
+    left: 350px;
+}

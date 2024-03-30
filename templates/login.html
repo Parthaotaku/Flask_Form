@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin login</title>
+    <link rel="stylesheet" type="text/css" href="../static/admin_styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Admin Login</h1>
+
+        <form  method="post" action="/login">
+            <label for="first">
+                  Username:
+              </label>
+            <input type="text"
+                   id="first"
+                   name="first"
+                   placeholder="Enter your Username" required>
+
+            <label for="password">
+                  Password:
+              </label>
+            <input type="password"
+                   id="password"
+                   name="password"
+                   placeholder="Enter your Password" required>
+
+            {% if message %}
+            <div class="error-message">{{ message }}</div>
+            {% endif %}
+
+            <div class="wrap">
+                <button type="submit">
+                    Login
+                </button>
+            </div>
+        </form>
+
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="/form">Form</a>
+                <!-- Add more form links as needed -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
